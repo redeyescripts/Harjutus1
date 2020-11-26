@@ -1,0 +1,68 @@
+using System;
+
+namespace WhereIsCar
+{
+    class Program
+        
+    
+
+    
+    {
+        class Car
+        {
+            string name;
+            string modelname;
+            string regnumber;
+            string color;
+            int odometer;
+            int fueltank;
+            public Car(string _name, string _modelname, string _regnumber,string _color, int _odometer, int _fueltank)
+            {
+                name = _name;
+                modelname = _modelname;
+                regnumber = _regnumber;
+                color = _color;
+                odometer = _odometer;
+                fueltank = _fueltank;
+                odometer = 0;
+                fueltank = 60;
+
+            }
+            public string Name
+            {
+                get { return name; }
+            }
+            public string ModelName
+            {
+                get { return modelname; }
+                set
+                {
+                    if(value == "E36"|| value == "AW")
+                    {
+                        modelname = value;
+                    }else
+                    {
+                        modelname = "undefined mark";
+                    }
+                    
+                }     
+            }
+            public void CarColor()
+            {
+                Console.WriteLine($"");
+            }
+            public void CarDrive()
+            {
+                Console.WriteLine("Mjäuuuu");
+                fueltank = -5;
+            }
+           
+
+        }
+
+        static void Main(string[] args)
+        {
+            Car NewCar = new Car("BMW", "E36", "MOSKVA");
+        }
+    }
+}
